@@ -1,0 +1,455 @@
+:root {
+  --primary-color: #550000;
+  --secondary-color: #440000;
+  --font-family: "Arial, sans-serif";
+  --background-color: #ede8d0;
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --font: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container utama */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 59px;
+  padding-right: 59px;
+}
+
+/* Logo */
+.logo {
+  color: var(--background-color);
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  line-height: 34px;
+  word-wrap: break-word;
+  font-style: italic;
+}
+
+/* Wrapper menu */
+.menu-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Item menu */
+.menu-item {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--light-color);
+  word-wrap: break-word;
+}
+
+.menu-item.active {
+  color: #4285f4;
+}
+
+/* Container utama */
+.hero {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  background-color: var(--background-color);
+}
+
+/* Bagian teks */
+.hero-text {
+  width: 722px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/* Judul & subjudul wrapper */
+.hero-content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Judul */
+.hero-title {
+  width: 702px;
+  color: var(--primary-color);
+  font-size: 56px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 78.4px;
+  word-wrap: break-word;
+}
+
+/* Subjudul */
+.hero-subtitle {
+  align-self: stretch;
+  color: #212121;
+  font-size: 24px;
+  font-family: var(--font);
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 33.6px;
+  word-wrap: break-word;
+}
+
+/* Tombol */
+.hero-button {
+  padding: 8px 20px;
+  background: #4b57ff;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Gambar */
+.hero-img {
+  width: 560px;
+  height: 392.9px;
+  object-fit: cover;
+}
+
+.hero-highlight {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Card Section */
+.section-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 48px; /* Tambahkan ini */
+}
+
+.card {
+  background: var(--primary-color);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Tambahkan ini */
+  min-height: 220px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-family: var(--font);
+  font-weight: 800;
+  color: var(--background-color);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  font-family: var(--font);
+  color: var(--light-color);
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Footer Section */
+.footer {
+  width: 100%;
+  background: var(--primary-color);
+  overflow: hidden;
+  padding: 32px 59px 0 59px;
+  box-sizing: border-box;
+  position: relative;
+  height: auto; /* biar responsif */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  position: static; /* jangan absolute */
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 48px;
+}
+
+.footer-link {
+  color: var(--background-color);
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-icon {
+  width: 11px;
+  height: 11px;
+  position: relative;
+}
+
+.footer-icon .outer,
+.footer-icon .middle,
+.footer-icon .inner {
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+}
+
+.footer-icon .outer {
+  width: 11px;
+  height: 11px;
+  top: 0;
+  left: 0;
+}
+
+.footer-icon .middle {
+  width: 8px;
+  height: 8px;
+  top: 1.5px;
+  left: 1.5px;
+}
+
+.footer-icon .inner {
+  width: 4px;
+  height: 4px;
+  top: 3.5px;
+  left: 3.5px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 11px;
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid rgba(82, 81, 81, 0.53);
+  margin: 32px 0 0 0;
+  position: static;
+}
+
+.section {
+  width: 100%;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 59px;
+  padding-right: 59px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 60px;
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Tambahkan ini */
+  font-weight: 600;
+  font-style: italic;
+  line-height: 76px;
+  letter-spacing: 0.5px;
+  width: 100%; /* Tambahkan ini agar full lebar section */
+}
+
+.section-dual {
+  display: flex;
+  gap: 48px;
+  padding: 59px;
+  background: #fff;
+  border-radius: 24px;
+  margin-top: 0;
+  height: 450px; /* Pastikan tidak ada margin atas berlebih */
+}
+
+.section-dual-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-dual-title {
+  font-size: 32px;
+  color: var(--primary-color);
+  font-family: var(--font);
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.section-dual-desc {
+  font-size: 18px;
+  color: var(--dark-color);
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.section-overlay-custom {
+  min-height: 500px;
+  padding-left: 59px;
+    padding-right: 59px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("/asset/images/light.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-overlay-inner {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  gap: 80px;
+}
+
+.section-overlay-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 192px;
+  gap: 16px;
+}
+
+.section-overlay-tagline {
+  color: var();
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.section-overlay-heading {
+  color: var(--primary-color);
+  font-size: 48px;
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 57.6px;
+}
+
+.section-overlay-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.section-overlay-desc {
+  color: var(--background-color);
+  font-size: 18px;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.section-overlay-actions {
+  display: flex;
+  gap: 24px;
+}
+
+.section-overlay-btn {
+  padding: 12px 24px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.section-overlay-link {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-overlay-arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  margin-left: 2px;
+}
